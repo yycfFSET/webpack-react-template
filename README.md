@@ -4,7 +4,7 @@
 
 ## 介绍
 
-你好，我是[燕云长风](https://yanyunchangfeng.github.io)。
+你好，我是[燕云长风](https://yanyunchangfeng.github.io)。    
 寓意：结合李白著名的边塞诗《关山月》取【燕云长风】—— 长风几万里，吹度玉门关。
 
 ## 用法
@@ -36,6 +36,7 @@
 ```
    yarn cypress:open or  npm run cypress:open
    yarn cypress:run or  npm run cypress:run
+   yarn cypress:run-report or  npm run cypress:run-report 生成自定义的测试报告
 ```      
             
 ## 打包分析
