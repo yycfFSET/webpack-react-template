@@ -1,11 +1,22 @@
+interface IVisit {
+  id: string;
+  icon: string;
+}
+
 describe("test visit / ", () => {
-  before(() => {
+  beforeEach(() => {
     cy.fixture("visit").as("visit");
   });
   it("get div id correct", () => {
-    cy.get("@visit").then((visit: Record<string, any>) => {
+    cy.get<IVisit>("@visit").then((visit) => {
       cy.visit("/");
       cy.get("div").should("have.id", visit.id);
+    });
+  });
+  it("get link icon correct", () => {
+    cy.get<IVisit>("@visit").then((visit) => {
+      cy.visit("/");
+      cy.get("link[rel='icon']").should("have.attr", "href", visit.icon);
     });
   });
 });
