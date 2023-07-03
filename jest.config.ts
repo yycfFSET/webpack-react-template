@@ -12,6 +12,7 @@ const config: Config = {
         tsconfig: { emitDecoratorMetadata: true, experimentalDecorators: true },
       },
     ],
+    ".+\\.(css|styl|less|sass|scss|svg|png|jpg)$": "jest-transform-stub", //静态资源
   },
   moduleNameMapper: {
     "^src/(.*)$": "<rootDir>/src/$1",
