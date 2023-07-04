@@ -24,8 +24,10 @@
     "start": "cross-env NODE_ENV=development webpack serve",
     "start-analyzer": "cross-env NODE_ENV=development ANALYZE=1  webpack serve",
     "start-unused": "cross-env NODE_ENV=development UNUSED=1  webpack serve",
+    "start-smp": "cross-env NODE_ENV=development SMP=1  webpack serve",
     "build": "cross-env NODE_ENV=production webpack",
     "build-analyzer": "cross-env NODE_ENV=production ANALYZE=1  webpack",
+    "build-smp": "cross-env NODE_ENV=production SMP=1  webpack",
     "generateAnalyzerFile": "cross-env NODE_ENV=production webpack --profile --json > stats.json",
     "analyzer": "webpack-bundle-analyzer --port 8888 ./dist/stats.json",
     "clean": "rimraf ./dist",
@@ -36,9 +38,10 @@
     "build:cjs": "tsc -p tsconfig.build.json -m commonjs --outDir dist/cjs",
     "build-umd-esm-cjs": "npm run clean && npm run build:umd && npm run build:esm && npm run build:cjs",
     "cypress:open": "cypress open",
-    "cypress:run": "concurrently --kill-others --success=first \" npm start \"  \" wait-on http://localhost:8080 && cypress run \"",
+    "cypress:run": "concurrently --kill-others --success=first \" npm start \"  \" wait-on http://localhost:8080 && cypress run \" ",
+    "prettier": "prettier -c --write  **/* --cache",
     "prepare": "husky install",
-    "pre-commit": "cross-env CI=true npm test && npm run cypress:run"
+    "pre-commit": "lint-staged && cross-env CI=true npm test && npm run cypress:run"
   },
   "files": [
     "dist"
@@ -71,7 +74,9 @@
     "jest": "29.3.1",
     "jest-environment-jsdom": "29.5.0",
     "jest-transform-stub": "2.0.0",
+    "lint-staged": "13.2.3",
     "mini-css-extract-plugin": "2.6.0",
+    "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "sass": "1.49.11",
     "sass-loader": "12.6.0",
@@ -97,5 +102,9 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": "prettier --write  --ignore-unknown",
+    "*.{json,less,scss,md}": "prettier --write --ignore-unknown"
   }
 }
