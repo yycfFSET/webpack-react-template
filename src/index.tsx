@@ -1,12 +1,7 @@
-import { FC } from 'react';
 import { createRoot } from 'react-dom/client';
 import React from 'react';
-import './index.scss';
+import App from 'src/App';
 
-document.body.innerHTML = `<div id="root"></div>`;
-const App: FC = () => {
-  return <></>;
-};
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
 root.render(<App />);
@@ -14,5 +9,3 @@ root.render(<App />);
 if (module.hot) {
   module.hot.accept();
 }
-
-export { App };
