@@ -39,7 +39,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: github-pages
+          name: eslint-report
           path: ./report
 
       - name: Deploy to remote gh-pages branch
