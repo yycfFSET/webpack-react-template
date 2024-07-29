@@ -28,19 +28,19 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Run ESLint
-        run: npx eslint . --format html --output-file eslint-report.html || true
+        run: npx eslint . --format html --output-file ./report/eslint-report.html || true
 
       - name: Upload ESLint report
         uses: actions/upload-pages-artifact@v1
         with:
           name: eslint-report
-          path: eslint-report.html
+          path: ./report
 
       - name: Deploy to remote gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: eslint-report.html
+          publish_dir: ./report
 
       - name: Deploy to GitHub Pages
         id: deployment
