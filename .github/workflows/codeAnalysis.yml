@@ -30,11 +30,17 @@ jobs:
       - name: Run ESLint
         run: npx eslint . --format html --output-file ./report/index.html || true
 
-      # - name: Upload ESLint report
-      #   uses: actions/upload-pages-artifact@v1
-      #   with:
-      #     name: eslint-report
-      #     path: ./report
+      - name: Upload ESLint report
+        uses: actions/upload-pages-artifact@v1
+        with:
+          name: eslint-report
+          path: ./report
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: github-pages
+          path: ./report
 
       - name: Deploy to remote gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
