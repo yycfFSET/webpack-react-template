@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   build:
-    name: test
+    name: deploy
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -42,27 +42,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  # deploy:
-  #   name: Deploy
-  #   needs: build
-  #   permissions:
-  #     contents: write
-  #     pages: write
-  #     id-token: write
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-
-  #   runs-on: ubuntu-latest
-  #   if: github.ref == 'refs/heads/master'
-
-  #   steps:
-  #     - name: Deploy to remote gh-pages branch
-  #       uses: actions/upload-pages-artifact@v3
-  #       with:
-  #         path: ./dist
-
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
