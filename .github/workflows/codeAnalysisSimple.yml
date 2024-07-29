@@ -1,4 +1,4 @@
-name: Code Analysis Easy
+name: Code Analysis Simple
 
 on:
   workflow_dispatch:
