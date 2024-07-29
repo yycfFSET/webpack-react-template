@@ -5,9 +5,9 @@ import pluginReact from 'eslint-plugin-react';
 
 export default [
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
-  { languageOptions: { globals: globals.browser } },
+  { languageOptions: { globals: { ...globals.browser } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  { ignores: ['./config/'] }
+  { ignores: ['config/', 'cypress/', 'cypress.config.ts', 'webpack.config.js', 'jest.config.ts', 'eslint.config.mjs'] }
 ];
