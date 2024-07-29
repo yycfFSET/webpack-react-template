@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: test
     runs-on: ubuntu-latest
 
     steps:
@@ -24,8 +24,8 @@ jobs:
       - name: Test project
         run: npm run pre-commit
 
-      - name: Build project
-        run: npm run build
+      # - name: Build project
+      #   run: npm run build
 
   deploy:
     name: Deploy
@@ -42,6 +42,9 @@ jobs:
     if: github.ref == 'refs/heads/master'
 
     steps:
+      - name: Build project
+        run: npm run build
+
       - name: Deploy to remote gh-pages branch
         uses: actions/upload-pages-artifact@v3
         with:
