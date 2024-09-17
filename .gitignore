@@ -52,4 +52,4 @@ Thumbs.db
 cypress/videos/*
 
 # eslit html
-/report
+eslint-report
