@@ -9,5 +9,5 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  { ignores: ['config/', 'cypress/', 'cypress.config.ts', 'webpack.config.js', 'jest.config.ts', 'eslint.config.mjs'] }
+  { ignores: ['*', '!*/', 'config/', 'cypress/'] }
 ];
