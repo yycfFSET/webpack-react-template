@@ -47,7 +47,7 @@
     "prettier": "prettier -c --write  **/* --cache",
     "prepare": "husky install",
     "pre-commit": "lint-staged && cross-env CI=true npm test && npm run cypress:run",
-    "lint": "eslint  -f html -o ./report/index.html || true"
+    "eslint:report": "eslint  -f html -o eslint-report/index.html || true"
   },
   "files": [
     "dist"
