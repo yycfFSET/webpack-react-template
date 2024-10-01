@@ -1,4 +1,4 @@
-![build](https://github.com/yanyunchangfeng/webpack-react-template/actions/workflows/test.yml/badge.svg) [![codecov](https://codecov.io/gh/yanyunchangfeng/webpack-react-template/branch/main/graph/badge.svg)](https://codecov.io/gh/yanyunchangfeng/webpack-react-template)
+[![Test Coverage](https://github.com/yanyunchangfeng/webpack-react-template/actions/workflows/test.yml/badge.svg)](https://github.com/yanyunchangfeng/webpack-react-template/actions/workflows/test.yml/?query=branch:main) [![codecov](https://codecov.io/gh/yanyunchangfeng/webpack-react-template/branch/main/graph/badge.svg)](https://codecov.io/gh/yanyunchangfeng/webpack-react-template)
 
 <p align="center">
     <img width="300" src="src/assets/img/yanyunchangfeng.png">
