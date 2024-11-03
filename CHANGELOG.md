@@ -1,3 +1,9 @@
+# [1.1.0-rc.1](https://github.com/yanyunchangfeng/webpack-react-template/compare/v1.0.0...v1.1.0-rc.1) (2024-11-03)
+
+### Features
+
+- update config & readme ([9a13474](https://github.com/yanyunchangfeng/webpack-react-template/commit/9a134745f87b70e300826fb70727eac4c6877235))
+
 # 1.0.0 (2024-11-03)
 
 ### Bug Fixes
