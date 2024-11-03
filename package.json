@@ -30,7 +30,6 @@
     "analyzer": "webpack-bundle-analyzer --port 8888 ./dist/stats.json",
     "clean": "rimraf ./dist",
     "build-css": "sass ./src/index.scss ./dist/index.css",
-    "prepublishOnly": "npm run pre-commit && npm run build-umd-esm-cjs",
     "build:umd": "cross-env NODE_ENV=production UMD_LIBRARY=MyLibrary webpack build",
     "build:esm": "tsc -p tsconfig.build.json -m es6 --outDir dist/esm",
     "build:cjs": "tsc -p tsconfig.build.json -m commonjs --outDir dist/cjs",
