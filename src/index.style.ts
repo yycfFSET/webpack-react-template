@@ -7,10 +7,4 @@ export const GlobalStyle = createGlobalStyle`
 
 export const WrapContainer = styled.div`
   height: 100%;
-  .container {
-    height: 100%;
-    &:hover {
-      background-color: #f5f5f5;
-    }
-  }
 `;

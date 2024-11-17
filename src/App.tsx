@@ -5,9 +5,7 @@ const App: FC = () => {
   return (
     <>
       <GlobalStyle />
-      <WrapContainer>
-        <div className="container"></div>
-      </WrapContainer>
+      <WrapContainer></WrapContainer>
     </>
   );
 };
